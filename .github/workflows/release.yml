@@ -12,11 +12,6 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-  - run: |
-      npm install
-  - env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
