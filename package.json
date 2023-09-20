@@ -1,20 +1,20 @@
 {
   "name": "@datacom-dexp/ui-sample-components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://dexp.nz/cards",
   "repository": "github:@datacom-digital/ui-sample-components",
-  "main": "dist/index.js",
-  "module:": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "index.js",
+  "module:": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
     "build": "rollup -c",
-    "dev": "rollup -c --watch"
+    "dev": "rollup -c --watch",
+    "publish": "publish ./dist",
+    "release": ""
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@rollup/plugin-terser": "^0.4.3",
@@ -25,7 +25,7 @@
     "react-dom": "^18.2.0",
     "rimraf": "^4.4.1",
     "rollup": "^3.29.2",
-    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.6.2"
   },

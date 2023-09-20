@@ -4,12 +4,11 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import copy from 'rollup-plugin-copy'
 
 import { glob } from 'glob';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-
-import pkg from "./package.json" assert { type: 'json' };
 
 // https://github.com/d3/d3-interpolate/issues/58
 const D3_WARNING = /Circular dependency.*d3-interpolate/
@@ -48,6 +47,11 @@ export default [
 			commonjs(),
 			terser(),
 			typescript(),
+			copy({
+				targets: [
+					{ src: './package.json', dest: './dist' },
+				]
+			})
 		],
 		onwarn(warning, warn) {
 			if (
