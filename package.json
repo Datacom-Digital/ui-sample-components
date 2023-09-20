@@ -10,6 +10,7 @@
     "clean": "rimraf dist",
     "build": "rollup -c",
     "dev": "rollup -c --watch",
+    "change": "npx changeset",
     "release": "npm run clean && npm run build && npm publish ./dist"
   },
   "devDependencies": {
