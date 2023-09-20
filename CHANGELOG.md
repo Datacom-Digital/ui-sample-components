@@ -1,5 +1,12 @@
 # @datacom-dexp/ui-sample-components
 
+## 0.2.4
+
+### Patch Changes
+
+- fb57f65: autocommit
+- a2d4fa5: autocommit
+
 ## 0.2.3
 
 ### Patch Changes
