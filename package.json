@@ -1,6 +1,6 @@
 {
   "name": "@datacom-dexp/ui-sample-components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://dexp.nz/cards",
   "repository": "github:@datacom-digital/ui-sample-components",
   "main": "index.js",
@@ -10,8 +10,7 @@
     "clean": "rimraf dist",
     "build": "rollup -c",
     "dev": "rollup -c --watch",
-    "publish": "publish ./dist",
-    "release": ""
+    "release": "npm run clean && npm run build && npm publish ./dist"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
