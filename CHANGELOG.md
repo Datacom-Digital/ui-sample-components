@@ -1,5 +1,11 @@
 # @datacom-dexp/ui-sample-components
 
+## 0.3.1
+
+### Patch Changes
+
+- 5fafff7: fix build
+
 ## 0.3.0
 
 ### Minor Changes
