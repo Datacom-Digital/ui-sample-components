@@ -1,5 +1,11 @@
 # @datacom-dexp/ui-sample-components
 
+## 0.3.0
+
+### Minor Changes
+
+- 10f428a: Change to tsup to resolve package dependency issues
+
 ## 0.2.4
 
 ### Patch Changes
