@@ -1,5 +1,11 @@
 # @datacom-dexp/ui-sample-components
 
+## 0.3.2
+
+### Patch Changes
+
+- 5878793: fix package.json
+
 ## 0.3.1
 
 ### Patch Changes
