@@ -1,4 +1,17 @@
-import { CardsActivityGoal, CardsCalendar, CardsChat, CardsCookieSettings, CardsCreateAccount, CardsDataTable, CardsMetric, CardsPaymentMethod, CardsReportIssue, CardsShare, CardsStats, CardsTeamMembers } from "@/cards"
+import {
+  CardsActivityGoal,
+  CardsCalendar,
+  CardsChat,
+  CardsCookieSettings,
+  CardsCreateAccount,
+  CardsDataTable,
+  CardsMetric,
+  CardsPaymentMethod,
+  CardsReportIssue,
+  CardsShare,
+  CardsStats,
+  CardsTeamMembers,
+} from "@/cards";
 
 export const Dashboard = () => {
   return (
@@ -48,5 +61,5 @@ export const Dashboard = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
