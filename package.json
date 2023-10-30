@@ -3,9 +3,10 @@
   "version": "0.3.0",
   "homepage": "https://dexp.nz/cards",
   "repository": "github:@datacom-digital/ui-sample-components",
-  "main": "./dist/index.js",
-  "module:": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "index.js",
+  "type": "module",
+  "module:": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
     "build": "tsup src/index.tsx src/icons.tsx  --publicDir --dts --format esm --onSuccess \"cp package.json README.md LICENSE CHANGELOG.md ./dist\"",
