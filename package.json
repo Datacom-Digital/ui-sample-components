@@ -8,7 +8,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "tsup src/index.tsx src/icons.tsx  --publicDir --dts --format esm",
+    "build": "tsup src/index.tsx src/icons.tsx  --publicDir --dts --format esm --onSuccess \"cp package.json README.md LICENSE CHANGELOG.md ./dist\"",
     "dev": "npm run build -- --watch",
     "change": "npx changeset",
     "release": "npm run clean && npm run build && npm publish ./dist"
