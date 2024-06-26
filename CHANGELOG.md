@@ -1,5 +1,11 @@
 # @datacom-dexp/ui-sample-components
 
+## 0.3.3
+
+### Patch Changes
+
+- d0fe6ed: Remove depency on local images
+
 ## 0.3.2
 
 ### Patch Changes
