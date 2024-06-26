@@ -1,6 +1,6 @@
 {
   "name": "@datacom-digital/ui-sample-components",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "homepage": "https://dexp.nz/cards",
   "repository": "github:@datacom-digital/ui-sample-components",
   "main": "index.js",
