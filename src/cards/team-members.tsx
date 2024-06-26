@@ -1,20 +1,16 @@
-"use client"
+"use client";
 
-import { ChevronDownIcon } from "@radix-ui/react-icons"
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/ui/avatar"
-import { Button } from "@/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar";
+import { Button } from "@/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/ui/card"
+} from "@/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -22,12 +18,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/ui/popover"
+} from "@/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/ui/popover";
 
 export function CardsTeamMembers() {
   return (
@@ -42,7 +34,6 @@ export function CardsTeamMembers() {
         <div className="flex items-center justify-between space-x-4">
           <div className="flex items-center space-x-4">
             <Avatar className="h-8 w-8">
-              <AvatarImage src="/avatars/01.png" alt="Image" />
               <AvatarFallback>OM</AvatarFallback>
             </Avatar>
             <div>
@@ -96,7 +87,6 @@ export function CardsTeamMembers() {
         <div className="flex items-center justify-between space-x-4">
           <div className="flex items-center space-x-4">
             <Avatar className="h-8 w-8">
-              <AvatarImage src="/avatars/02.png" alt="Image" />
               <AvatarFallback>JL</AvatarFallback>
             </Avatar>
             <div>
@@ -150,7 +140,6 @@ export function CardsTeamMembers() {
         <div className="flex items-center justify-between space-x-4">
           <div className="flex items-center space-x-4">
             <Avatar className="h-8 w-8">
-              <AvatarImage src="/avatars/03.png" alt="Image" />
               <AvatarFallback>IN</AvatarFallback>
             </Avatar>
             <div>
@@ -205,5 +194,5 @@ export function CardsTeamMembers() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
