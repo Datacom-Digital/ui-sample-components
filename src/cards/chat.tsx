@@ -1,19 +1,10 @@
-import * as React from "react"
-import { CheckIcon, PaperPlaneIcon, PlusIcon } from "@radix-ui/react-icons"
+import * as React from "react";
+import { CheckIcon, PaperPlaneIcon, PlusIcon } from "@radix-ui/react-icons";
 
-import { cn } from "@/lib/utils"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/ui/avatar"
-import { Button } from "@/ui/button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/ui/card"
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar";
+import { Button } from "@/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -21,7 +12,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/ui/command"
+} from "@/ui/command";
 import {
   Dialog,
   DialogContent,
@@ -29,48 +20,43 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/ui/dialog"
-import { Input } from "@/ui/input"
+} from "@/ui/dialog";
+import { Input } from "@/ui/input";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/ui/tooltip"
+} from "@/ui/tooltip";
 
 const users = [
   {
     name: "Olivia Martin",
     email: "m@example.com",
-    avatar: "/avatars/01.png",
   },
   {
     name: "Isabella Nguyen",
     email: "isabella.nguyen@email.com",
-    avatar: "/avatars/03.png",
   },
   {
     name: "Emma Wilson",
     email: "emma@example.com",
-    avatar: "/avatars/05.png",
   },
   {
     name: "Jackson Lee",
     email: "lee@example.com",
-    avatar: "/avatars/02.png",
   },
   {
     name: "William Kim",
     email: "will@email.com",
-    avatar: "/avatars/04.png",
   },
-] as const
+] as const;
 
-type User = (typeof users)[number]
+type User = (typeof users)[number];
 
 export function CardsChat() {
-  const [open, setOpen] = React.useState(false)
-  const [selectedUsers, setSelectedUsers] = React.useState<User[]>([])
+  const [open, setOpen] = React.useState(false);
+  const [selectedUsers, setSelectedUsers] = React.useState<User[]>([]);
 
   const [messages, setMessages] = React.useState([
     {
@@ -89,9 +75,9 @@ export function CardsChat() {
       role: "user",
       content: "I can't log in.",
     },
-  ])
-  const [input, setInput] = React.useState("")
-  const inputLength = input.trim().length
+  ]);
+  const [input, setInput] = React.useState("");
+  const inputLength = input.trim().length;
 
   return (
     <>
@@ -99,7 +85,6 @@ export function CardsChat() {
         <CardHeader className="flex flex-row items-center">
           <div className="flex items-center space-x-4">
             <Avatar>
-              <AvatarImage src="/avatars/01.png" alt="Image" />
               <AvatarFallback>OM</AvatarFallback>
             </Avatar>
             <div>
@@ -144,16 +129,16 @@ export function CardsChat() {
         <CardFooter>
           <form
             onSubmit={(event) => {
-              event.preventDefault()
-              if (inputLength === 0) return
+              event.preventDefault();
+              if (inputLength === 0) return;
               setMessages([
                 ...messages,
                 {
                   role: "user",
                   content: input,
                 },
-              ])
-              setInput("")
+              ]);
+              setInput("");
             }}
             className="flex w-full items-center space-x-2"
           >
@@ -196,18 +181,17 @@ export function CardsChat() {
                           selectedUsers.filter(
                             (selectedUser) => selectedUser !== user
                           )
-                        )
+                        );
                       }
 
                       return setSelectedUsers(
                         [...users].filter((u) =>
                           [...selectedUsers, user].includes(u)
                         )
-                      )
+                      );
                     }}
                   >
                     <Avatar>
-                      <AvatarImage src={user.avatar} alt="Image" />
                       <AvatarFallback>{user.name[0]}</AvatarFallback>
                     </Avatar>
                     <div className="ml-2">
@@ -234,7 +218,6 @@ export function CardsChat() {
                     key={user.email}
                     className="inline-block border-2 border-background"
                   >
-                    <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name[0]}</AvatarFallback>
                   </Avatar>
                 ))}
@@ -247,7 +230,7 @@ export function CardsChat() {
             <Button
               disabled={selectedUsers.length < 2}
               onClick={() => {
-                setOpen(false)
+                setOpen(false);
               }}
             >
               Continue
@@ -256,5 +239,5 @@ export function CardsChat() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }
